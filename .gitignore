@@ -1,0 +1,39 @@
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# IDEs
+.vscode/
+.idea/
+
+# Environment variables
+.env
+
+# Data (Ignore raw, processed, and external data)
+# We only want to track code, not large datasets
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+data/external/*
+!data/external/.gitkeep
+
+# MLflow
+mlruns/
+
+# Checkpoints
+models/saved/*
+!models/saved/.gitkeep
+
+# Logs
+logs/*
+!logs/.gitkeep
+
+# OS specific
+.DS_Store
