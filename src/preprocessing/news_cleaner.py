@@ -37,3 +37,4 @@ class NewsCleaner:
             
         logger.info(f"Cleaned {len(news_list)} news items. Kept {len(cleaned_list)} valid items.")
         return cleaned_list
+

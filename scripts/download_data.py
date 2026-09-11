@@ -1,7 +1,14 @@
+import sys
+import os
+from pathlib import Path
+
+# Add project root to sys.path so we can import config and src
+project_root = Path(__file__).resolve().parent.parent
+sys.path.append(str(project_root))
+
 import argparse
 import logging
 import json
-import os
 from datetime import datetime, timedelta
 from config.settings import settings
 from src.data.market_data import YFinanceMarketProvider

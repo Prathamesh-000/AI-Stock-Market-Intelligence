@@ -55,3 +55,4 @@ class NewsDeduplicator:
                 
         logger.info(f"Deduplication: Reduced {len(news_list)} raw items to {len(canonical_events)} canonical events.")
         return canonical_events
+

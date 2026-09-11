@@ -38,3 +38,4 @@ class MarketCleaner:
         cleaned_df.dropna(subset=['Close'], inplace=True)
         
         return cleaned_df
+
