@@ -54,3 +54,4 @@ class FinBERTSentiment:
             "negative_prob": round(neg_prob, 4),
             "neutral_prob": round(neu_prob, 4)
         }
+

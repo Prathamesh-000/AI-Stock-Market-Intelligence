@@ -51,3 +51,4 @@ class NoveltyDetector:
         except Exception as e:
             logger.warning(f"Novelty calculation failed: {e}. Defaulting to 1.0.")
             return 1.0
+

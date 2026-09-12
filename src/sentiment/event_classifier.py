@@ -53,3 +53,4 @@ class EventClassifier:
         except Exception as e:
             logger.error(f"Classification failed: {e}")
             return {"event_type": "Unknown", "event_probability": 0.0}
+
