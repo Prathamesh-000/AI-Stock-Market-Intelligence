@@ -51,3 +51,4 @@ class RelativePerformance:
         # Return just the new columns attached to Timestamp
         cols_to_keep = ['Timestamp', f'Alpha_{prefix}', f'Cum_Alpha_{prefix}_{window}', f'RS_Ratio_{prefix}']
         return merged[cols_to_keep]
+

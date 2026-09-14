@@ -35,3 +35,4 @@ class MarketRegime:
         if 'Timestamp' in df.columns:
             return df[['Timestamp', 'Market_Regime']]
         return df[['Market_Regime']]
+

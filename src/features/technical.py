@@ -48,3 +48,4 @@ class TechnicalFeatures:
         df['MACD_Signal'] = df['MACD'].ewm(span=9, adjust=False).mean()
         df['MACD_Hist'] = df['MACD'] - df['MACD_Signal']
         return df
+

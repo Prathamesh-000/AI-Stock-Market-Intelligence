@@ -29,3 +29,4 @@ class VolumeFeatures:
         # A simple boolean flag if today's volume is greater than yesterday's
         df['Vol_Increasing'] = (df['Volume'] > df['Volume'].shift(1)).astype(int)
         return df
+

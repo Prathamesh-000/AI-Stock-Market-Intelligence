@@ -41,3 +41,4 @@ class VolatilityFeatures:
         df['BB_Width'] = (df['BB_Upper'] - df['BB_Lower']) / df['BB_Mid']
         df['BB_Pct'] = (df[column] - df['BB_Lower']) / (df['BB_Upper'] - df['BB_Lower'])
         return df
+
