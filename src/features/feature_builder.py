@@ -65,3 +65,4 @@ class FeatureBuilder:
         logger.info(f"Merged {len(merged_df)} events with Market Context (dropped {original_len - len(merged_df)} due to missing market history).")
         
         return merged_df
+

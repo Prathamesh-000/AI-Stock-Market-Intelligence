@@ -84,3 +84,4 @@ class TargetCreator:
         df['Direction'] = np.select(conditions, choices, default=0)
         
         return df
+
