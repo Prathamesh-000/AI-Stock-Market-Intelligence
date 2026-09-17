@@ -71,3 +71,4 @@ class MarketImpactXGBoost:
         """Loads the model weights"""
         self.model.load_model(filepath)
         logger.info(f"Model loaded from {filepath}")
+
