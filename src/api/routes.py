@@ -7,6 +7,8 @@ import joblib
 from pathlib import Path
 from config.settings import settings
 from src.models.xgboost_model import MarketImpactXGBoost
+from src.database.db import SessionLocal
+from src.database.models import PredictionLog
 from src.api.ws_manager import manager
 
 logger = logging.getLogger(__name__)
@@ -112,6 +114,24 @@ async def run_prediction_pipeline(request: PredictionRequest):
             "timestamp": pd.Timestamp.now().isoformat()
         }
         
+        # Save to Database
+        db = SessionLocal()
+        try:
+            db_log = PredictionLog(
+                ticker=payload["ticker"],
+                headline=payload["headline"],
+                signal=payload["signal"],
+                confidence_score=payload["confidence_score"]
+            )
+            db.add(db_log)
+            db.commit()
+            logger.info("Saved prediction to database.")
+        except Exception as e:
+            logger.error(f"Failed to save prediction to database: {e}")
+            db.rollback()
+        finally:
+            db.close()
+            
         # Broadcast via WebSockets
         await manager.broadcast(payload)
         logger.info(f"Broadcasted prediction: {payload}")
