@@ -1,7 +1,5 @@
 import sys
-import os
 from pathlib import Path
-
 project_root = Path(__file__).resolve().parent.parent
 sys.path.append(str(project_root))
 
@@ -10,18 +8,18 @@ import logging
 import pandas as pd
 import numpy as np
 from config.settings import settings
-from src.validation.splitter import TimeSeriesSplitter
 from src.models.xgboost_model import MarketImpactXGBoost
+from src.models.calibration import ConfidenceCalibrator
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
 
 def main():
-    parser = argparse.ArgumentParser(description="Train XGBoost Model (Phase 7)")
+    parser = argparse.ArgumentParser(description="Train and Calibrate XGBoost Model (Phases 7 & 8)")
     parser.add_argument("--ticker", type=str, default=settings.default_tickers.split(",")[0])
     args = parser.parse_args()
     
-    logger.info(f"--- Starting Model Training for {args.ticker} ---")
+    logger.info(f"--- Starting Advanced Training Pipeline for {args.ticker} ---")
     
     # 1. Load Dataset
     dataset_file = settings.data_dir / "processed" / f"{args.ticker}_final_dataset.csv"
@@ -36,13 +34,7 @@ def main():
         return
 
     # 2. Preprocessing
-    logger.info("Preprocessing features...")
-    
-    # Map Target: 1 (Up) remains 1. -1 (Down) and 0 (Neutral) become 0.
-    # XGBoost binary classification requires 0 and 1.
     df['Target'] = np.where(df['Direction'] == 1, 1, 0)
-    
-    # Drop columns that are text, future data (CAR_1d, Impact_Score, Direction), or identifiers
     cols_to_drop = [
         'event_id', 'headline', 'summary', 'url', 'publisher', 'source', 
         'published_at', 'duplicate_sources', 'Direction', 'CAR_1d', 'Impact_Score',
@@ -50,47 +42,61 @@ def main():
     ]
     df = df.drop(columns=[col for col in cols_to_drop if col in df.columns])
     
-    # One-Hot Encode Categorical 'event_type'
     if 'event_type' in df.columns:
         df = pd.get_dummies(df, columns=['event_type'], drop_first=True)
         
-    # 3. Split Data
-    # Attempt strict purged split first
-    train_df, test_df = TimeSeriesSplitter.purged_split(df, test_size=0.2, purge_days=20)
-    
-    # Fallback for testing on small datasets (like 1 month) where purge deletes the whole test set
-    if len(test_df) == 0:
-        logger.warning("Dataset too small for strict Embargo Purge. Falling back to basic chronological split (WARNING: May contain leakage, for testing only!)")
-        train_end_idx = int(len(df) * 0.8)
-        train_df = df.iloc[:train_end_idx]
-        test_df = df.iloc[train_end_idx:]
+    # Ensure chronological order for splitting
+    if 'market_reaction_time' in df.columns:
+        df['market_reaction_time'] = pd.to_datetime(df['market_reaction_time'])
+        df = df.sort_values('market_reaction_time')
+        df = df.drop(columns=['market_reaction_time'])
         
-    # Now that it's split, we can safely select only numeric columns for XGBoost
-    train_df = train_df.select_dtypes(include=[np.number])
-    test_df = test_df.select_dtypes(include=[np.number])
+    df = df.select_dtypes(include=[np.number])
     
-    # Separate Features (X) and Target (y)
-    X_train = train_df.drop(columns=['Target'])
-    y_train = train_df['Target']
+    # 3. Time-Series Split (Train 60% | Validation 20% | Test 20%)
+    # Because this is a test environment with a tiny dataset, we use basic chronological splits
+    n = len(df)
+    train_df = df.iloc[:int(n*0.6)]
+    val_df = df.iloc[int(n*0.6):int(n*0.8)]
+    test_df = df.iloc[int(n*0.8):]
     
-    X_test = test_df.drop(columns=['Target'])
-    y_test = test_df['Target']
+    X_train, y_train = train_df.drop(columns=['Target']), train_df['Target']
+    X_val, y_val = val_df.drop(columns=['Target']), val_df['Target']
+    X_test, y_test = test_df.drop(columns=['Target']), test_df['Target']
     
-    # 4. Train Model
+    logger.info(f"Split sizes: Train={len(train_df)}, Val={len(val_df)}, Test={len(test_df)}")
+    
+    # 4. Train Base XGBoost
     model = MarketImpactXGBoost()
     model.train(X_train, y_train)
     
-    # 5. Evaluate
-    metrics = model.evaluate(X_test, y_test)
+    # 5. Calibrate Probabilities (Phase 8)
+    # We calibrate using the Validation set to avoid overfitting the train set
+    calibrator = ConfidenceCalibrator(method='sigmoid')
     
-    # 6. Save Model
+    # The CalibratedClassifierCV expects an sklearn-compatible estimator. 
+    # Our custom XGB wrapper hides the inner sklearn API slightly, so we pass model.model
+    calibrator.fit(model.model, X_val, y_val)
+    
+    # 6. Evaluate Confidence on Test Set
+    logger.info("Evaluating Calibrated Predictions on Test Set...")
+    calibrated_probs = calibrator.predict_proba(X_test)
+    
+    # Analyze how many trades we actually take vs skip
+    trade_stats = calibrator.filter_actionable_trades(calibrated_probs, lower_threshold=0.40, upper_threshold=0.60)
+    
+    logger.info("--- Uncertainty Filter Results ---")
+    for k, v in trade_stats.items():
+        logger.info(f"{k}: {v}")
+        
+    # 7. Save Artifacts
     model_dir = settings.project_root / "models" / "saved"
     model_dir.mkdir(parents=True, exist_ok=True)
     
-    save_path = model_dir / f"xgb_{args.ticker}_latest.json"
-    model.save_model(str(save_path))
+    model.save_model(str(model_dir / f"xgb_{args.ticker}_latest.json"))
+    calibrator.save(str(model_dir / f"calibrator_{args.ticker}_latest.pkl"))
     
-    logger.info("--- Phase 7 Complete ---")
+    logger.info("--- Phases 7 & 8 Complete ---")
 
 if __name__ == "__main__":
     main()
