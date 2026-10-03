@@ -11,11 +11,13 @@ WORKDIR /app
 
 # Install system dependencies (required for some Python packages like numpy/scipy)
 RUN apt-get update && apt-get install -y \
-    libgomp1 \
+    build-essential \
     && rm -rf /var/lib/apt/lists/*
 
 # Install Python dependencies
 COPY requirements.txt .
+# Install CPU-only PyTorch first to save 3GB of NVIDIA CUDA downloads!
+RUN pip install --no-cache-dir torch --index-url https://download.pytorch.org/whl/cpu
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy project
