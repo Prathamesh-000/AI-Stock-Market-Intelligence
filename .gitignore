@@ -38,3 +38,4 @@ logs/*
 # OS specific
 .DS_Store
 
+\n# Databases\n*.db\n\n# Node modules\nfrontend/node_modules/\nfrontend/dist/\n\n# Scratch scripts\nscratch_*.py\nscripts/add_history*.py\nscripts/bloomberg*.py\nscripts/enrich_payload*.py\nscripts/fix_*.py\nscripts/update_*.py\nscripts/populate_*.py\nscripts/variation*.py\n
