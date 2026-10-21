@@ -103,3 +103,4 @@ def run_pipeline(tickers: list[str] = TICKERS, news_per_ticker: int = 3):
 if __name__ == '__main__':
     results = run_pipeline()
     print(json.dumps(results[:3], indent=2, default=str))
+

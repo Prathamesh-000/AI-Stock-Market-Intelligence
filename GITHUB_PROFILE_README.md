@@ -36,3 +36,4 @@ Building AI-powered tools for financial analysis and market prediction.
 ### 📊 GitHub Stats
 
 ![Prathamesh's GitHub stats](https://github-readme-stats.vercel.app/api?username=Prathamesh-000&show_icons=true&theme=radical)
+

@@ -76,3 +76,4 @@ Build an end-to-end AI terminal that:
 - API response time < 10 seconds per prediction
 - Frontend loads and displays live data without errors
 - Docker deployment works on clean machine
+

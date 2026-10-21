@@ -53,3 +53,4 @@
 2. **Price ticker**: 1W/1M buttons were not clickable → Fixed by correcting yfinance period/interval params
 3. **Same news effect**: Identical headlines produced identical scores → Fixed by adding headline hash + timestamp variation
 4. **Empty files**: Many source files were created as placeholders → Fixed by implementing complete code
+

@@ -24,3 +24,4 @@ data/
 - Vector store files ARE committed (required for RAG to work)
 - Never commit `.env` or API keys
 - The `trade_logs.db` SQLite file is gitignored (runtime data)
+

@@ -16,7 +16,6 @@ __pycache__/
 .env
 
 # Data (Ignore raw, processed, and external data)
-# We only want to track code, not large datasets
 data/raw/*
 !data/raw/.gitkeep
 data/processed/*
@@ -38,4 +37,21 @@ logs/*
 # OS specific
 .DS_Store
 
-\n# Databases\n*.db\n\n# Node modules\nfrontend/node_modules/\nfrontend/dist/\n\n# Scratch scripts\nscratch_*.py\nscripts/add_history*.py\nscripts/bloomberg*.py\nscripts/enrich_payload*.py\nscripts/fix_*.py\nscripts/update_*.py\nscripts/populate_*.py\nscripts/variation*.py\n
+# Databases
+*.db
+data/*.db
+data/**/*.db
+
+# Node modules
+frontend/node_modules/
+frontend/dist/
+
+# Scratch & temporary scripts
+scratch_*.py
+scripts/add_history*.py
+scripts/bloomberg*.py
+scripts/enrich_payload*.py
+scripts/fix_*.py
+scripts/update_*.py
+scripts/populate_*.py
+scripts/variation*.py

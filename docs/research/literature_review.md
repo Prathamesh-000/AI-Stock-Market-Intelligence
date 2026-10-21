@@ -79,3 +79,4 @@ Chen and Guestrin (2016) introduced XGBoost, which remains highly competitive fo
 5. Lopez-Lira, A., Tang, Y. (2023). Can ChatGPT forecast stock price movements? *SSRN*.
 6. Lewis, P., et al. (2020). Retrieval-augmented generation for knowledge-intensive NLP tasks. *NeurIPS*.
 7. Chen, T., Guestrin, C. (2016). XGBoost: A scalable tree boosting system. *KDD*.
+

@@ -56,3 +56,4 @@
 | Open source | ❌ | ❌ | ✅ |
 | Cost | \$24K/yr | Enterprise | Free |
 | Custom UI | Limited | Limited | ✅ Full |
+

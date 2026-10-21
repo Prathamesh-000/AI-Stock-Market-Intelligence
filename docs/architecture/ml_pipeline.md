@@ -108,3 +108,4 @@ elif direction == "BEARISH" and impact_score > 5 and confidence > 60:
 else:
     signal = "⚖️ HOLD"
 ```
+

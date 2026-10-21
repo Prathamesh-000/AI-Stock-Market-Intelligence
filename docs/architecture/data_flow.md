@@ -81,3 +81,4 @@ OpenAI API ──────────────────────►
 
 - `historical_news_embeddings.npy` — numpy array (N × 1536)
 - `historical_news_metadata.json` — list of {headline, ticker, date, direction, return_pct}
+
