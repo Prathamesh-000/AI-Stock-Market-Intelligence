@@ -4,3 +4,4 @@ Provides data processing, NLP event extraction, XGBoost prediction, and quantita
 """
 
 __version__ = "1.0.0"
+

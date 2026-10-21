@@ -11,3 +11,4 @@ __all__ = [
     "news_router",
     "predictions_router",
 ]
+

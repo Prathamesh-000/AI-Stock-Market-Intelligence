@@ -36,3 +36,4 @@ class PredictionRepository:
             .limit(limit)
             .all()
         )
+

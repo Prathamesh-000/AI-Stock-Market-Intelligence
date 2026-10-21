@@ -31,3 +31,4 @@ class MarketSnapshot(Base):
     change_pct = Column(Float, nullable=False)
     volume = Column(Integer, nullable=True)
     timestamp = Column(DateTime, default=datetime.utcnow, index=True)
+

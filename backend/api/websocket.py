@@ -53,3 +53,4 @@ async def websocket_endpoint(websocket: WebSocket, ticker: str = "ALL"):
     except Exception as e:
         logger.debug(f"WebSocket exception: {e}")
         ws_manager.disconnect(websocket)
+

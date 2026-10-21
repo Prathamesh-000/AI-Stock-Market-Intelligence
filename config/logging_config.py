@@ -36,3 +36,4 @@ def setup_logging(level: str = "INFO", log_to_file: bool = True) -> logging.Logg
     return logger
 
 logger = setup_logging()
+

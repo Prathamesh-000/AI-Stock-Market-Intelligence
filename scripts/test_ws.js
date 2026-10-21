@@ -31,3 +31,4 @@ ws.on('error', function error(err) {
 ws.on('close', function close() {
   console.log('[CLOSED] Disconnected from market stream.');
 });
+

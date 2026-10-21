@@ -47,3 +47,4 @@ async def get_news_feed(ticker: str, limit: int = 10) -> List[Dict[str, Any]]:
     except Exception as e:
         logger.error(f"Error fetching news for {ticker_upper}: {e}")
         return []
+

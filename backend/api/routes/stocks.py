@@ -86,3 +86,4 @@ async def get_chart_data(ticker: str, period: str = Query("1D", regex="^(1D|1W|1
     except Exception as e:
         logger.warning(f"Fallback chart triggered for {ticker_upper}: {e}")
         return {"ticker": ticker_upper, "period": period, "data": []}
+

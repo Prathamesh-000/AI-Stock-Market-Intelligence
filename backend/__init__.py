@@ -4,3 +4,4 @@ Provides REST and WebSocket API interfaces, schemas, database models, and servic
 """
 
 __version__ = "1.0.0"
+
