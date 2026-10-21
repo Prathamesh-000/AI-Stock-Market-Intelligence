@@ -1,12 +1,12 @@
 <div align="center">
 
 # 👨‍💻 Hi, I'm Prathamesh Patil
-### *Quantitative ML Engineer • Generative AI Architect • Full-Stack Developer*
+### *Quantitative ML Engineer • Generative AI & Autonomous Agent Architect • Full-Stack Developer*
 
 <br/>
 
 <a href="https://github.com/Prathamesh-000">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=3000&pause=1000&color=00F0FF&center=true&vCenter=true&width=750&lines=Quantitative+ML+%26+Stock+Forecasting;Generative+AI+%26+Autonomous+Agent+Architect;Building+High-Throughput+FastAPI+%26+React+Systems;Web3+Event+Auditing+on+Polygon+Amoy" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=3000&pause=1000&color=00F0FF&center=true&vCenter=true&width=800&lines=Quantitative+ML+%26+Stock+Forecasting;HackIndia+Spark+6+Finalist+•+Team+Routers;Generative+AI+%26+Self-RAG+Pipeline+Architect;Full-Stack+(FastAPI+•+React+•+WebSockets+•+Web3)" alt="Typing SVG" />
 </a>
 
 <br/>
@@ -17,8 +17,8 @@
 
 <br/>
 
-> **"Bridging the frontier of Quantitative Finance, Generative AI, and High-Performance Distributed Systems."**  
-> I engineer production-grade platforms combining **deep machine learning, calibrated financial mathematics, LLM agent orchestration, and sleek interactive interfaces**.
+> **"Bridging the frontier of Quantitative Finance, Generative AI, and Decentralized Infrastructure."**  
+> I engineer production-grade platforms combining **deep machine learning, calibrated financial mathematics, LLM agent orchestration, and high-reliability distributed systems**.
 
 <br/>
 
@@ -32,10 +32,10 @@
 
 ## 🎯 About Me & Engineering Philosophy
 
-- 🧠 **Quantitative & Applied Machine Learning:** Building predictive financial models using **per-ticker XGBoost classifiers, Platt scaling probability calibration, and multi-asset cross-impact regression**.
-- 🤖 **Generative AI & Agentic RAG:** Designing autonomous reasoning systems utilizing **OpenAI GPT-4o-mini structured outputs, Google Gemini Pro memory chains, LangChain agents**, and pure-NumPy vector retrieval engines.
-- ⚡ **High-Throughput Web Platforms:** Engineering asynchronous backends with **FastAPI, Uvicorn, and native WebSockets**, connected to modular **React 18 & TypeScript** trading dashboards.
-- ⛓️ **Web3 & Cryptographic Audit Trails:** Deploying smart contract integrations on **Polygon Amoy EVM** using **Ethers.js** to immutably verify real-world data hashes on-chain.
+- 🧠 **Quantitative Machine Learning & FinTech:** Building institutional-grade market prediction pipelines using **calibrated XGBoost classifiers, Platt scaling, and multi-asset sector ripple regressions**.
+- 🤖 **Generative AI & Self-RAG Systems:** Designing resilient conversational and retrieval systems utilizing **LangChain, Self-RAG architectures, OpenAI GPT-4o-mini structured schemas, and Google Gemini Pro memory chains**.
+- ⚡ **High-Throughput Web Platforms:** Engineering asynchronous microservices with **FastAPI, Uvicorn, and native WebSockets**, tied to modern **React 18 & TypeScript** interactive dashboards.
+- ⛓️ **Web3 & Cryptographic Audit Trails:** Deploying smart contract integrations on **Polygon Amoy EVM** using **Ethers.js** for immutable on-chain data logging and responder reputation.
 
 ---
 
@@ -52,16 +52,17 @@
 Breaking News ➔ GPT-4o-mini NLP ➔ NumPy RAG ➔ Calibrated XGBoost ➔ Sector Ripple ➔ React Terminal
 ```
 
-- **What it does:** Ingests breaking financial headlines and outputs calibrated price-movement probabilities, sentiment polarity, 5 years of historical event precedents, and competitor ripple impacts in **under 3 seconds**.
+- **Project Overview:** Ingests breaking financial headlines and outputs calibrated price-movement probabilities, sentiment polarity, 5 years of historical event precedents, and competitor ripple impacts in **under 3 seconds**.
 - **Key Technical Highlights:**
-  - **Multi-Model Pipeline:** Deterministic GPT-4o-mini structured JSON extractor + zero-dependency NumPy Vector RAG (5,000+ historical events).
+  - **Multi-Model Pipeline:** Deterministic GPT-4o-mini structured JSON extractor + zero-dependency NumPy Vector RAG (5,000+ historical financial events).
   - **Calibrated Quant ML:** Per-ticker gradient-boosted trees (NVDA, AMD, AAPL, TSLA, MSFT) calibrated via **Platt Scaling / Isotonic Regression** to prevent statistical overconfidence.
-  - **Sector Ripple Engine:** 3 dedicated XGBoost regressors predicting cross-asset supply-chain reactions (e.g. NVDA announcement $\rightarrow$ AMD, TSMC, and Intel reactions).
+  - **Sector Ripple Engine:** 3 dedicated XGBoost regressors predicting cross-asset supply-chain reactions (e.g., NVDA announcement $\rightarrow$ AMD, TSMC, and Intel price reactions).
   - **Real-Time Trading UI:** Bloomberg-style React 18 / TypeScript terminal with WebSocket streaming, interactive Recharts (1D/1W/1M), live Yahoo Finance RSS feeds, and a background accuracy auditing daemon.
 - **Tech Stack:** `Python 3.11` • `FastAPI` • `React 18` • `TypeScript` • `XGBoost` • `GPT-4o-mini` • `Tailwind CSS` • `WebSockets` • `Docker`
 
 <p align="left">
-  <a href="https://github.com/Prathamesh-000/AI-Stock-Market-Intelligence"><b>View Project Repository →</b></a>
+  <a href="https://github.com/Prathamesh-000/AI-Stock-Market-Intelligence"><b>View Project Repository →</b></a> &nbsp;|&nbsp; 
+  <a href="https://github.com/Prathamesh-000/AI-Stock-Market-Intelligence/blob/main/PROJECT_COMPLETE_REFERENCE.md"><b>Deep-Dive Technical Reference →</b></a>
 </p>
 
 </td>
@@ -70,77 +71,35 @@ Breaking News ➔ GPT-4o-mini NLP ➔ NumPy RAG ➔ Calibrated XGBoost ➔ Secto
 <tr>
 <td width="100%">
 
-### 🚨 2. [CrisisMatch AI — Emergency Dispatch & Resource Matcher](https://github.com/Prathamesh-000/crisis-match-backend)
-**Autonomous Disaster Relief Coordination Powered by Google Gemini Pro & LangChain**
+### 🚨 2. [Crisis Match (Sahayak Setu) — HackIndia Spark 6 @ NIT Delhi](https://github.com/HackIndiaXYZ/hackindia-spark-6-ncr-central-region-routers)
+**Decentralized Offline-First Emergency Orchestration & Dispatch Platform**
 
-- **What it does:** Real-time conversational AI system designed to handle distress signals during natural disasters and civilian emergencies.
-- **Key Technical Highlights:**
-  - Employs **LangChain LLMChain** with **ConversationBufferMemory** to maintain per-user context across active crisis communications.
-  - Features structured prompt engineering on **Google Gemini Pro** to extract intent, civilian urgency, volunteer skill sets, and medical competencies from unstructured messages.
-  - Returns strictly validated JSON schemas to route resources with zero delay.
-- **Tech Stack:** `Python` • `FastAPI` • `Google Gemini Pro` • `LangChain` • `Pydantic` • `Uvicorn`
+> 🏆 *Built at **HackIndia Spark 6 @ NIT Delhi** by **Team Routers***
 
-<p align="left">
-  <a href="https://github.com/Prathamesh-000/crisis-match-backend"><b>View Project Repository →</b></a>
-</p>
+```text
+Distress SOS (Voice / SMS) ➔ n8n Orchestration ➔ LangChain Self-RAG ➔ Geo-Routing ➔ Polygon On-Chain Ledger
+```
 
-</td>
-</tr>
+- **Project Overview:** In catastrophic emergencies (floods, earthquakes, network blackouts), centralized 112/911 call centers collapse and internet access disappears. **Crisis Match** is an offline-resilient, decentralized platform that coordinates victims with the nearest verified responders via telephony SMS fallbacks, voice SOS triggers, and blockchain reputation auditing.
 
-<tr>
-<td width="100%">
+- **👨‍💻 My Core Contributions:**
+  1. **🧠 AI Pipeline & Self-RAG Architecture:**
+     - Architected and developed the intelligent emergency assistant microservice using **FastAPI**, **LangChain**, and **Google Gemini Pro**.
+     - Implemented **ConversationBufferMemory** for stateful multi-turn crisis dialogues and a **Self-RAG (Retrieval-Augmented Generation)** pipeline using vector embeddings (FAISS) to extract actionable intent, medical urgency, and volunteer skills from unstructured messages.
+     - Enforced strict Pydantic JSON schemas to guarantee error-free machine-to-machine dispatch routing.
+  2. **⚡ Workflow Automation & Webhook Orchestration (n8n):**
+     - Designed and deployed event-driven **n8n workflows** that bridge offline telephony and backend services.
+     - Automated pipelines for **zero-connectivity SMS fallback alerts**, audio-to-text dispatch webhooks, and emergency alert broadcasts.
+  3. **⛓️ Web3 Blockchain Trust & Audit Layer (Polygon Amoy):**
+     - Developed the decentralized trust layer interfacing with Ethereum-compatible smart contracts on the **Polygon Amoy testnet** using **Ethers.js v6**.
+     - Implemented cryptographic `bytes32` hash generation to immutably commit rescue event logs (`logEvent`) on-chain, creating a tamper-proof audit trail and verifiable responder reputation system.
 
-### 🛣️ 3. [AI Road Health Intelligence & Predictive Maintenance](https://github.com/Prathamesh-000/AI-Based-Road-Health-Intelligence-Predictive-Maintenance-System)
-**Computer Vision & Anomaly Detection for Municipal Infrastructure**
-
-- **What it does:** End-to-end computer vision and predictive analytics pipeline that evaluates asphalt degradation, structural fissures, and surface distress.
-- **Key Technical Highlights:**
-  - Automated defect detection from visual feeds to classify severity levels (mild, moderate, critical).
-  - Forecasts structural degradation timelines to trigger predictive municipal maintenance schedules before severe roadway hazards develop.
-- **Tech Stack:** `Python` • `Computer Vision` • `Deep Learning` • `Predictive Analytics` • `Data Pipelines`
+- **Tech Stack:** `Python` • `FastAPI` • `LangChain` • `Google Gemini Pro` • `Self-RAG` • `FAISS` • `n8n` • `Node.js` • `Ethers.js` • `Polygon Amoy` • `PostGIS`
 
 <p align="left">
-  <a href="https://github.com/Prathamesh-000/AI-Based-Road-Health-Intelligence-Predictive-Maintenance-System"><b>View Project Repository →</b></a>
-</p>
-
-</td>
-</tr>
-
-<tr>
-<td width="100%">
-
-### 🔗 4. [Immutable Event Ledger — Web3 Blockchain Backend](https://github.com/Prathamesh-000/blockchain-backend)
-**Decentralized Data Verification on Polygon Amoy EVM**
-
-- **What it does:** High-reliability bridge connecting web backends to Ethereum-compatible smart contracts for tamper-proof data auditing.
-- **Key Technical Highlights:**
-  - Interfaces directly with the **Polygon Amoy testnet** using **Ethers.js v6**.
-  - Implements cryptographically secure `bytes32` hash generation and on-chain logging (`logEvent`) for immutable proof-of-existence records.
-  - Built-in transaction receipt awaiting and error handling for gas optimization and network reliability.
-- **Tech Stack:** `Node.js` • `Express.js` • `Ethers.js` • `Polygon Amoy` • `Solidity / EVM` • `CORS`
-
-<p align="left">
-  <a href="https://github.com/Prathamesh-000/blockchain-backend"><b>View Project Repository →</b></a>
-</p>
-
-</td>
-</tr>
-
-<tr>
-<td width="100%">
-
-### ✂️ 5. [Cut & Go — Service Booking & Workforce Platform](https://github.com/Prathamesh-000/CUSTOMER-REGISTER)
-**Full-Stack Appointment Management & Dual-Role Onboarding Engine**
-
-- **What it does:** Scalable platform handling multi-stakeholder scheduling, stylist onboarding, and customer reservation flows.
-- **Key Technical Highlights:**
-  - Dual-role architectural split: dedicated customer registration and stylist onboarding micro-interfaces.
-  - Implemented secure password hashing via **Bcrypt**, document persistence via **MongoDB & Mongoose**, and input schema validation.
-- **Tech Stack:** `Node.js` • `Express.js` • `MongoDB` • `Mongoose` • `Bcrypt.js` • `RESTful APIs`
-
-<p align="left">
-  <a href="https://github.com/Prathamesh-000/CUSTOMER-REGISTER"><b>Customer Portal →</b></a> &nbsp;|&nbsp; 
-  <a href="https://github.com/Prathamesh-000/barber-register"><b>Stylist Portal →</b></a>
+  <a href="https://github.com/HackIndiaXYZ/hackindia-spark-6-ncr-central-region-routers"><b>View Official HackIndia Repository →</b></a> &nbsp;|&nbsp; 
+  <a href="https://github.com/Prathamesh-000/crisis-match-backend"><b>AI Microservice Repo →</b></a> &nbsp;|&nbsp; 
+  <a href="https://github.com/Prathamesh-000/blockchain-backend"><b>Blockchain Service Repo →</b></a>
 </p>
 
 </td>
@@ -165,14 +124,14 @@ Breaking News ➔ GPT-4o-mini NLP ➔ NumPy RAG ➔ Calibrated XGBoost ➔ Secto
 ![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)
 ![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
 
-### 🌐 Backend & Distributed Systems
+### 🌐 Backend, APIs & Orchestration
 ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
+![n8n](https://img.shields.io/badge/n8n_Automation-EA4B71?style=for-the-badge&logo=n8n&logoColor=white)
 ![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
 ![Express.js](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)
 ![WebSockets](https://img.shields.io/badge/WebSockets-010101?style=for-the-badge&logo=socketdotio&logoColor=white)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
 ![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
-![SQLite](https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
 
 ### 💻 Frontend & Data Visualization
@@ -211,7 +170,7 @@ Breaking News ➔ GPT-4o-mini NLP ➔ NumPy RAG ➔ Calibrated XGBoost ➔ Secto
 
 - 🔬 **High-Precision Time-Series Feature Engineering:** Combining microsecond order-book dynamics with macroeconomic event embeddings.
 - ⚡ **Low-Latency Agent Orchestration:** Building multi-agent systems that autonomously reason, verify facts via RAG, and execute complex workflows under 500ms.
-- 🌐 **Scalable Quantitative Trading Infrastructure:** Expanding sector ripple modeling to broad-market ETF baskets and derivatives.
+- 🌐 **Scalable Quantitative Trading Infrastructure:** Expanding sector ripple modeling to broad-market ETF baskets and cross-asset derivatives.
 
 ---
 
