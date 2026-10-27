@@ -122,3 +122,4 @@ export const PredictionCard: React.FC<PredictionCardProps> = ({
     </div>
   );
 };
+

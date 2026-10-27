@@ -74,3 +74,4 @@ export const Watchlist: React.FC<WatchlistProps> = ({
     </div>
   );
 };
+

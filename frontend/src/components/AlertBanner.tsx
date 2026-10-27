@@ -34,3 +34,4 @@ export const AlertBanner: React.FC<AlertBannerProps> = ({ prediction, selectedTi
     </div>
   );
 };
+

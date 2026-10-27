@@ -63,3 +63,4 @@ export function useMarketWebSocket({ onMessage }: UseMarketWebSocketOptions = {}
 
   return { isConnected };
 }
+

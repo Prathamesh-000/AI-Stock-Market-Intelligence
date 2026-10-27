@@ -38,3 +38,4 @@ export const ReasoningBox: React.FC<ReasoningBoxProps> = ({
     </div>
   );
 };
+

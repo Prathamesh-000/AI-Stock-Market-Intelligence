@@ -75,3 +75,4 @@ export const NewsInput: React.FC<NewsInputProps> = ({
     </div>
   );
 };
+

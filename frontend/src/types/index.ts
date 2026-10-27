@@ -125,3 +125,4 @@ export interface ChartDataResult {
   currentPrice: number;
   periodLabel: string;
 }
+

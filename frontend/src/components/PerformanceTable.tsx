@@ -70,3 +70,4 @@ export const PerformanceTable: React.FC<PerformanceTableProps> = ({
     </div>
   );
 };
+

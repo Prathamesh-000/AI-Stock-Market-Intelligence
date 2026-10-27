@@ -31,35 +31,42 @@
 
 ## 🖥️ Live Dashboard Preview
 
-```text
-┌────────────────────────────────────────────────────────────────────────────────────────────────────────┐
-│  AI STOCK MARKET INTELLIGENCE TERMINAL                            [ LIVE MARKET: OPEN ● ]  [ WS: CONNECTED 🟢 ] │
-├────────────────────────────────────────────────────────────────────────────────────────────────────────┤
-│  INDEXES:  S&P 500  5,864.67 ▲ +0.40%  │  NASDAQ  18,373.61 ▲ +0.63%  │  DOW JONES  43,077.70 ▼ -0.15%    │
-│  WATCH:    NVDA $138.25 ▲ +3.2% │ AMD $156.40 ▼ -1.4% │ AAPL $231.80 ▲ +0.8% │ TSLA $218.90 ▲ +1.1%     │
-├───────────────────────────────────────────────────────┬────────────────────────────────────────────────┤
-│  🎯 PREDICTION INPUT & CONFIGURATION                  │  🚀 AI PREDICTION SUMMARY                      │
-│                                                       │                                                │
-│  Select Ticker: [ NVDA - NVIDIA Corporation     ▼ ]   │   SIGNAL:     [ 🚀 STRONG BUY ]                │
-│  News Headline:                                       │   CONFIDENCE: [ 74.2% ] (Calibrated)           │
-│  ┌──────────────────────────────────────────────────┐ │   DIRECTION:  BULLISH 📈                       │
-│  │ "NVIDIA unveils next-gen Blackwell Ultra chip,   │ │   1-HOUR TARGET: +1.8%                         │
-│  │  cutting power consumption by 50% with 3x speed" │ │   1-DAY TARGET:  +3.4%                         │
-│  └──────────────────────────────────────────────────┘ │   SENTIMENT:  +0.76 (Very Bullish)             │
-│  [ ⚡ RUN AI ANALYSIS ]  (Streaming via WebSocket...)  │   IMPACT:     74 / 100 (High Market Shock)     │
-├───────────────────────────────────────────────────────┴────────────────────────────────────────────────┤
-│  🌊 SECTOR RIPPLE ENGINE (Cross-Competitor Impact Forecast)                                            │
-│   AMD   [ 📉 -3.2% ] ░░░░░░░░ (Market share displacement in data center GPUs)                          │
-│   TSM   [ 📈 +2.4% ] ███████░ (Foundry supplier benefit: 100% wafer manufacturing contract)           │
-│   INTC  [ 📉 -1.8% ] ░░░░░░░░ (Widening enterprise GPU gap)                                            │
-├───────────────────────────────────────────────────────┬────────────────────────────────────────────────┤
-│  📚 HISTORICAL MEMORY (RAG Vector Matches)            │  🔍 EXPLAINABLE AI (SHAP Reasoning Engine)     │
-│  Match 1: "NVIDIA announces H100 GPU" (Jul 2023)      │  • Event classification: Product Launch (High) │
-│           Similarity: 91.4%  ➔  Actual 1D Return: +8.7%│  • Technical setup: RSI 54.2 (Neutral-Bullish) │
-│  Match 2: "NVDA efficiency breakthrough" (Jan 2024)   │  • Primary factor: Novel energy-efficiency     │
-│           Similarity: 86.8%  ➔  Actual 1D Return: +5.1%│  • Volume context: 1.4x relative volume spike  │
-└───────────────────────────────────────────────────────┴────────────────────────────────────────────────┘
-```
+<div align="center">
+
+### ⚡ 1. Primary AI Signal & Predictive Intelligence Terminal
+> *Real-time institutional signal feed displaying calibrated confidence probability, predicted return horizon, FinBERT NLP polarity gauge, scrubbable price action canvas, and plain-English AI catalyst reasoning.*
+
+![AI Stock Terminal - Live Signal Feed](docs/images/nvda_signal_analysis.png)
+
+<br/>
+
+### 📊 2. Bloomberg-Style Market Overview & Multi-Ticker Watchlist
+> *Live market indices ribbon (S&P 500, NASDAQ, DOW), automated news ingestion feed, ticker watchlist with real-time percentage deltas, and rapid scenario simulator.*
+
+![AI Stock Terminal - Full Dashboard Overview](docs/images/dashboard_main.png)
+
+<br/>
+
+### 🌊 3. Sector Ripple Impact, SHAP Feature Attribution & Performance Audit
+> *Cross-asset spillover regressors (AMD, TSM, INTC), top predictive technical and fundamental feature drivers, and continuous self-auditing accuracy ledger.*
+
+![AI Stock Terminal - Sector Ripple & Explainable AI](docs/images/dashboard_analysis.png)
+
+<br/>
+
+### 📈 4. Prediction Confidence Timeline & Multi-Asset Intelligence
+<table width="100%">
+<tr>
+<td width="50%" align="center"><b>Prediction Confidence Timeline (Signal Drift vs BUY/SELL Thresholds)</b></td>
+<td width="50%" align="center"><b>Cross-Ticker Execution (e.g., Apple AAPL Signal Analysis)</b></td>
+</tr>
+<tr>
+<td width="50%"><img src="docs/images/confidence_timeline.png" alt="Prediction Confidence Timeline" width="100%"/></td>
+<td width="50%"><img src="docs/images/aapl_signal.png" alt="Multi-Asset Intelligence AAPL" width="100%"/></td>
+</tr>
+</table>
+
+</div>
 
 ---
 
@@ -172,6 +179,13 @@ In modern financial markets, stocks **never move in isolation**. A single announ
 ```
 
 This engine uses **three dedicated XGBoost regressors** trained on 5-year cross-asset correlation matrices to predict these ripple percentages with quantitative backing.
+
+<div align="center">
+
+![Sector Ripple Engine in Terminal](docs/images/dashboard_analysis.png)
+*Figure: Real-time Sector Ripple predictions for AMD, TSM, and INTC alongside SHAP feature drivers and live accuracy audit logs.*
+
+</div>
 
 ---
 
@@ -449,9 +463,36 @@ AI-Stock-Market-Intelligence/
 │       ├── backtest.py                    # Backtesting simulation engine
 │       └── metrics.py                     # Sharpe ratio, Sortino, max drawdown, win rate
 │
-├── 📁 frontend/                           # React 18 TypeScript Dashboard
+├── 📁 frontend/                           # Modular React 18 + TypeScript Dashboard
 │   ├── src/
-│   │   ├── App.tsx                        # Complete Bloomberg-style trading terminal
+│   │   ├── components/                    # Domain-Driven UI Components
+│   │   │   ├── AlertBanner.tsx            # Live alerts & socket status banner
+│   │   │   ├── ConfidenceTimeline.tsx     # Historical signal confidence tracking chart
+│   │   │   ├── Header.tsx                 # Terminal header bar & time indicator
+│   │   │   ├── LiveNewsModal.tsx          # Real-time financial headline modal
+│   │   │   ├── MarketOverview.tsx         # Market indices ticker ribbon (S&P 500, NASDAQ, DOW)
+│   │   │   ├── NewsInput.tsx              # Headline ingestion & simulation controller
+│   │   │   ├── PerformanceTable.tsx       # Live model performance audit table
+│   │   │   ├── Watchlist.tsx              # Tracked tickers sidebar with live percentage deltas
+│   │   │   └── prediction/                # Core AI forecast visualization components
+│   │   │       ├── EvidentiarySources.tsx # Multi-source citation feed (Bloomberg, Reuters, SEC)
+│   │   │       ├── FeatureDrivers.tsx     # XGBoost feature importance bar breakdown
+│   │   │       ├── PredictionCard.tsx     # Signal badge, confidence meter & target projection
+│   │   │       ├── PriceChart.tsx         # Interactive historical price action canvas (1D/1W/1M)
+│   │   │       ├── ReasoningBox.tsx       # Plain-English AI rationale & catalyst classification
+│   │   │       ├── SectorRipple.tsx       # Cross-competitor impact forecasting widgets
+│   │   │       └── SentimentGauge.tsx     # FinBERT polarity & sentiment classification gauge
+│   │   ├── hooks/
+│   │   │   └── useMarketWebSocket.ts      # WebSocket connection management & live stream hook
+│   │   ├── services/
+│   │   │   └── marketService.ts           # REST API client for predictions, indices, news, & health
+│   │   ├── types/
+│   │   │   └── index.ts                   # Centralized TypeScript definitions & interfaces
+│   │   ├── config/
+│   │   │   └── api.ts                     # API endpoints, fallback data, & configuration constants
+│   │   ├── utils/
+│   │   │   └── chartUtils.ts              # Timeframe filtering, SVG path math, & smoothing algorithms
+│   │   ├── App.tsx                        # Clean terminal coordinator view
 │   │   └── index.css                      # Tailwind dark theme configuration
 │   ├── package.json                       # Frontend dependencies & scripts
 │   └── vite.config.ts                     # Vite build configuration

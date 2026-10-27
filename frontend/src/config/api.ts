@@ -24,3 +24,4 @@ export const FALLBACK_PRICES: Record<string, { price: number; change: string }> 
 };
 
 export const SUPPORTED_TICKERS = ['NVDA', 'AMD', 'AAPL', 'TSLA', 'MSFT'] as const;
+

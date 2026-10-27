@@ -68,3 +68,4 @@ export function generateChartData(
   const changePct = Number(((delta / startPrice) * 100).toFixed(2));
   return { data, eventMarker: 'EVENT', changePct, delta, currentPrice: endPrice, periodLabel: 'Past Month' };
 }
+

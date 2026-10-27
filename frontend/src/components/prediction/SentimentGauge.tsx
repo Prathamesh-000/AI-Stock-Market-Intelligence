@@ -45,3 +45,4 @@ export const SentimentGauge: React.FC<SentimentGaugeProps> = ({ finbert }) => {
     </div>
   );
 };
+

@@ -38,3 +38,4 @@ export const SectorRipple: React.FC<SectorRippleProps> = ({ sectorRipple }) => {
     </div>
   );
 };
+

@@ -74,3 +74,4 @@ export const LiveNewsModal: React.FC<LiveNewsModalProps> = ({
     </div>
   );
 };
+

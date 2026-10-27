@@ -50,3 +50,4 @@ export const ConfidenceTimeline: React.FC<ConfidenceTimelineProps> = ({ predicti
     </div>
   );
 };
+

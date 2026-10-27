@@ -46,3 +46,4 @@ export const marketService = {
     window.open(`${API_URL}/export-predictions`, '_blank');
   }
 };
+
