@@ -67,7 +67,10 @@ async def run_prediction_pipeline(request: PredictionRequest):
         
         dataset_path = settings.data_dir / "processed" / f"{request.ticker}_final_dataset.csv"
         if not dataset_path.exists():
-            return
+            dataset_path = settings.data_dir / "processed" / "NVDA_final_dataset.csv"
+            if not dataset_path.exists():
+                logger.error(f"Dataset for {request.ticker} not found at {dataset_path}")
+                raise FileNotFoundError(f"Feature dataset not found for {request.ticker}")
             
         df = pd.read_csv(dataset_path)
         
@@ -481,6 +484,21 @@ async def run_prediction_pipeline(request: PredictionRequest):
         
     except Exception as e:
         logger.error(f"Pipeline error: {e}", exc_info=True)
+        try:
+            fallback_payload = {
+                "ticker": request.ticker,
+                "headline": request.headline,
+                "direction": "HOLD",
+                "probability": 50.0,
+                "sentiment": "Neutral",
+                "impact_score": 50,
+                "explanation": f"Analysis encountered a service issue: {str(e)[:100]}",
+                "sector_ripple": {"AMD": 0, "TSM": 0, "INTC": 0},
+                "similar_events": []
+            }
+            await manager.broadcast(fallback_payload)
+        except Exception as be:
+            logger.error(f"Failed to broadcast error fallback: {be}")
 
 @router.post("/predict")
 async def trigger_prediction(request: PredictionRequest, background_tasks: BackgroundTasks):

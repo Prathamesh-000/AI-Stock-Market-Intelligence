@@ -93,10 +93,23 @@ export default function App() {
   const handleExecuteAI = async () => {
     if (!headline.trim()) return;
     setLoading(true);
+
+    // Failsafe timeout to prevent button from hanging indefinitely
+    const safetyTimeout = setTimeout(() => {
+      setLoading((curr) => {
+        if (curr) {
+          console.warn('Prediction response timed out after 15s');
+          return false;
+        }
+        return false;
+      });
+    }, 15000);
+
     try {
       await marketService.triggerPrediction(ticker, headline);
     } catch (e) {
       console.error('Failed to trigger prediction:', e);
+      clearTimeout(safetyTimeout);
       setLoading(false);
     }
   };

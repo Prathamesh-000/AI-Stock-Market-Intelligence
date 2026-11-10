@@ -20,6 +20,8 @@ data/raw/*
 !data/raw/.gitkeep
 data/processed/*
 !data/processed/.gitkeep
+!data/processed/*_final_dataset.csv
+!data/processed/*_backtest_results.csv
 data/external/*
 !data/external/.gitkeep
 
@@ -29,6 +31,8 @@ mlruns/
 # Checkpoints
 models/saved/*
 !models/saved/.gitkeep
+!models/saved/*.json
+!models/saved/*.pkl
 
 # Logs
 logs/*
