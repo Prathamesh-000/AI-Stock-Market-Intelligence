@@ -8,6 +8,11 @@ export const WS_URL = (() => {
   if (import.meta.env.VITE_WS_URL) {
     return import.meta.env.VITE_WS_URL;
   }
+  if (import.meta.env.VITE_API_URL) {
+    const wsProto = import.meta.env.VITE_API_URL.startsWith('https:') ? 'wss:' : 'ws:';
+    const host = import.meta.env.VITE_API_URL.replace(/^https?:\/\//, '').replace(/\/+$/, '');
+    return `${wsProto}//${host}/ws`;
+  }
   if (typeof window !== 'undefined' && window.location.hostname !== 'localhost') {
     const isHttps = window.location.protocol === 'https:';
     return `${isHttps ? 'wss:' : 'ws:'}//${window.location.host}/ws`;

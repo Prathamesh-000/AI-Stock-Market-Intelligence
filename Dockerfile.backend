@@ -18,7 +18,7 @@ RUN apt-get update && apt-get install -y \
 COPY requirements.txt .
 # Install CPU-only PyTorch first to save 3GB of NVIDIA CUDA downloads!
 RUN pip install --no-cache-dir torch --index-url https://download.pytorch.org/whl/cpu
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt --extra-index-url https://download.pytorch.org/whl/cpu
 
 # Copy project
 COPY . .
@@ -26,5 +26,5 @@ COPY . .
 # Expose port
 EXPOSE 8000
 
-# Run the FastAPI server
-CMD ["uvicorn", "src.api.main:app", "--host", "0.0.0.0", "--port", "8000"]
+# Run the FastAPI server using dynamic $PORT provided by hosting platforms (or fallback 8000)
+CMD ["sh", "-c", "uvicorn src.api.main:app --host 0.0.0.0 --port ${PORT:-8000}"]
