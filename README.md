@@ -13,15 +13,18 @@
 [![OpenAI](https://img.shields.io/badge/OpenAI-GPT--4o--mini-412991?style=for-the-badge&logo=openai&logoColor=white)](https://openai.com)
 [![Docker](https://img.shields.io/badge/Docker-Containerized-2496ED?style=for-the-badge&logo=docker&logoColor=white)](https://docker.com)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
+[![Vercel](https://img.shields.io/badge/Live_Demo-Vercel_Terminal-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://ai-stock-market-intelligence.vercel.app)
+[![Render](https://img.shields.io/badge/API_Server-Render_Live-46E3B7?style=for-the-badge&logo=render&logoColor=white)](https://ai-stock-market-backend-ros9.onrender.com/health)
 
 <br/>
 
+> ### 🌐 **Live Web Application:** [ai-stock-market-intelligence.vercel.app](https://ai-stock-market-intelligence.vercel.app)
 > **Enter any breaking financial headline. In under 3 seconds, AI predicts:**
 > **Will the stock go UP 📈 or DOWN 📉 — with exact calibrated confidence, 5 years of historical memory, explainable AI reasoning, and competitor ripple impacts.**
 
 <br/>
 
-[🌟 Features](#-key-features) • [💡 Explained in Plain English](#-explained-in-plain-english-eli5) • [🎬 30-Second Demo](#-the-30-second-demo-walkthrough) • [🏗️ Architecture](#-system-architecture) • [🚀 Quick Start](#-quick-start-guide) • [📡 API Reference](#-api-endpoints) • [📂 Structure](#-project-structure)
+[🚀 Live Demo](https://ai-stock-market-intelligence.vercel.app) • [🌟 Features](#-key-features) • [💡 Explained in Plain English](#-explained-in-plain-english-eli5) • [🎬 30-Second Demo](#-the-30-second-demo-walkthrough) • [🏗️ Architecture](#-system-architecture) • [🚀 Quick Start](#-quick-start-guide) • [📡 API Reference](#-api-endpoints) • [📂 Structure](#-project-structure)
 
 ---
 
@@ -258,6 +261,15 @@ You can run this project locally in **under 3 minutes** using Python and Node.js
 - **Python 3.11+** installed
 - **Node.js 18+** & npm installed
 - An **[OpenAI API Key](https://platform.openai.com/api-keys)** (for GPT-4o-mini structured analysis and embeddings)
+
+---
+
+### 🌐 Option 0: Instant Cloud Access (Zero Installation)
+
+The application is deployed live in production:
+- **💻 Live Web Terminal:** [https://ai-stock-market-intelligence.vercel.app](https://ai-stock-market-intelligence.vercel.app)
+- **⚡ AI Prediction Engine API:** [https://ai-stock-market-backend-ros9.onrender.com](https://ai-stock-market-backend-ros9.onrender.com)
+- **📖 Interactive Swagger Docs:** [https://ai-stock-market-backend-ros9.onrender.com/docs](https://ai-stock-market-backend-ros9.onrender.com/docs)
 
 ---
 
